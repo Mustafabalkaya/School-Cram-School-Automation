@@ -1,0 +1,63 @@
+﻿@using Dershane_sistem.Models.Entity
+@model List<Borclarr>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@using (Html.BeginForm("Index", "Borclar", FormMethod.Get))
+{
+    <p>
+        Borç Ara :@Html.TextBox("p")
+        <input type="submit" value="Ara" />
+
+    </p>
+}
+<div>
+    <h1 class="baslik">ÖĞRENCİ LİSTESİ</h1>
+</div>
+@*<a href="/Borclar/yeni_borc/" class="btn btn-primary">BORÇ EKLEME</a>*@
+
+<br /> <br />
+
+      <table class="table table-bordered">
+        <tr>
+            <th>Ogrenci Id </th>
+            <th>Ogrenci Ad </th>
+            <th>Ogrenci Soyad </th>
+            <th> Öğrenci Kalan Borç  </th>
+            <th>Borç Sil </th>
+            <th>Borç GUNCELLE </th>
+        </tr>
+        <tbody class="d-flex justify-content-start ">
+            @foreach (var borc in Model)
+            {
+                <tr>
+                    <th>@borc.Ogrenci.Ogrid</th>
+                    <td>@borc.OgrAd</td>
+                    <td>@borc.OgrSoyad</td>
+                    <td>@borc.OgrKalanBorc</td>
+
+                    <td> <a href="/Borclar/SIL/@borc.Ogrid" class="btn btn-danger" onclick="return confirm('Gerçekten Silmek İstiyorMusunuz')">BORÇ SİL</a></td>
+                    <td> <a href="/Borclar/borc_getir/@borc.Ogrid" class="btn btn-success">BORÇ GUNCELLE</a></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+<style>
+    .table-bordered{
+        position: absolute;
+  left: 0px;
+    }
+    .baslik{
+        font-family:'Times New Roman';
+        font-size:large;
+    }
+</style>
+
+
+
+    
+
+
+

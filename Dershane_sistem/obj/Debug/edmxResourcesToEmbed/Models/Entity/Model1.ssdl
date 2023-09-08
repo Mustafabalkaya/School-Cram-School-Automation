@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mustafaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Yoneticiid" />
+    </Key>
+    <Property Name="Yoneticiid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YoneticiAd" Type="varchar" MaxLength="20" />
+    <Property Name="YoneticiSifre" Type="varchar" MaxLength="20" />
+    <Property Name="AdminRol" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Alanlar">
+    <Key>
+      <PropertyRef Name="Alanid" />
+    </Key>
+    <Property Name="Alanid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AlanAd" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Borclarr">
+    <Key>
+      <PropertyRef Name="Ogrid" />
+    </Key>
+    <Property Name="Ogrid" Type="int" Nullable="false" />
+    <Property Name="OgrAd" Type="varchar" MaxLength="20" />
+    <Property Name="OgrSoyad" Type="varchar" MaxLength="20" />
+    <Property Name="OgrKalanBorc" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Giderler">
+    <Key>
+      <PropertyRef Name="Odemeid" />
+    </Key>
+    <Property Name="Odemeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Elektrik" Type="int" />
+    <Property Name="Su" Type="int" />
+    <Property Name="Dogalgaz" Type="int" />
+    <Property Name="internet" Type="int" />
+    <Property Name="Gida" Type="int" />
+    <Property Name="Personel" Type="int" />
+    <Property Name="Diger" Type="int" />
+  </EntityType>
+  <EntityType Name="Kasa">
+    <Key>
+      <PropertyRef Name="Odemeid" />
+    </Key>
+    <Property Name="Odemeid" Type="int" Nullable="false" />
+    <Property Name="OdemekMiktar" Type="varchar" MaxLength="20" />
+    <Property Name="OdemeAy" Type="varchar" MaxLength="20" />
+    <Property Name="ogrodemeid" Type="int" />
+  </EntityType>
+  <EntityType Name="Ogrenci">
+    <Key>
+      <PropertyRef Name="Ogrid" />
+    </Key>
+    <Property Name="Ogrid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OgrAd" Type="varchar" MaxLength="20" />
+    <Property Name="OgrSoyad" Type="varchar" MaxLength="20" />
+    <Property Name="OgrTc" Type="varchar" MaxLength="20" />
+    <Property Name="OgrTelefon" Type="varchar" MaxLength="20" />
+    <Property Name="OgrDogum" Type="varchar" MaxLength="20" />
+    <Property Name="OgrMail" Type="varchar" MaxLength="20" />
+    <Property Name="OgrVeliAdSoyad" Type="varchar" MaxLength="20" />
+    <Property Name="OgrVeliTelefon" Type="varchar" MaxLength="20" />
+    <Property Name="OgrVeliAdres" Type="varchar" MaxLength="20" />
+    <Property Name="OgrAlanid" Type="int" />
+    <Property Name="OgrSinifid" Type="int" />
+    <Property Name="ogrkontenjan" Type="int" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="Personelid" />
+    </Key>
+    <Property Name="Personelid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelAdSoyad" Type="varchar" MaxLength="20" />
+    <Property Name="PersonelDepartman" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RehberOgretmen">
+    <Key>
+      <PropertyRef Name="rehberlikid" />
+    </Key>
+    <Property Name="rehberlikid" Type="int" Nullable="false" />
+    <Property Name="rehberlikad" Type="varchar" MaxLength="50" />
+    <Property Name="ogrrehberlikid" Type="int" />
+  </EntityType>
+  <EntityType Name="Siniflar">
+    <Key>
+      <PropertyRef Name="Sinifid" />
+    </Key>
+    <Property Name="Sinifid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SinifNo" Type="varchar" MaxLength="20" />
+    <Property Name="SinifKapasite" Type="varchar" MaxLength="20" />
+    <Property Name="SinifDurum" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Borclarr_Ogrenci1">
+    <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="1" />
+    <End Role="Borclarr" Type="Self.Borclarr" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ogrenci">
+        <PropertyRef Name="Ogrid" />
+      </Principal>
+      <Dependent Role="Borclarr">
+        <PropertyRef Name="Ogrid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Giderler_Personel">
+    <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+    <End Role="Giderler" Type="Self.Giderler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personel">
+        <PropertyRef Name="Personelid" />
+      </Principal>
+      <Dependent Role="Giderler">
+        <PropertyRef Name="Personel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kasa_Ogrenci">
+    <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="0..1" />
+    <End Role="Kasa" Type="Self.Kasa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ogrenci">
+        <PropertyRef Name="Ogrid" />
+      </Principal>
+      <Dependent Role="Kasa">
+        <PropertyRef Name="ogrodemeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ogrenci_Alanlar">
+    <End Role="Alanlar" Type="Self.Alanlar" Multiplicity="0..1" />
+    <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alanlar">
+        <PropertyRef Name="Alanid" />
+      </Principal>
+      <Dependent Role="Ogrenci">
+        <PropertyRef Name="OgrAlanid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ogrenci_Siniflar">
+    <End Role="Siniflar" Type="Self.Siniflar" Multiplicity="0..1" />
+    <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Siniflar">
+        <PropertyRef Name="Sinifid" />
+      </Principal>
+      <Dependent Role="Ogrenci">
+        <PropertyRef Name="OgrSinifid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RehberOgretmen_Ogrenci">
+    <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="0..1" />
+    <End Role="RehberOgretmen" Type="Self.RehberOgretmen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ogrenci">
+        <PropertyRef Name="Ogrid" />
+      </Principal>
+      <Dependent Role="RehberOgretmen">
+        <PropertyRef Name="ogrrehberlikid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="mustafa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="musti" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="alan" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="mustafaModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Alanlar" EntityType="Self.Alanlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Borclarr" EntityType="Self.Borclarr" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Giderler" EntityType="Self.Giderler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kasa" EntityType="Self.Kasa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ogrenci" EntityType="Self.Ogrenci" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personel" EntityType="Self.Personel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RehberOgretmen" EntityType="Self.RehberOgretmen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Siniflar" EntityType="Self.Siniflar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Borclarr_Ogrenci1" Association="Self.FK_Borclarr_Ogrenci1">
+      <End Role="Ogrenci" EntitySet="Ogrenci" />
+      <End Role="Borclarr" EntitySet="Borclarr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Giderler_Personel" Association="Self.FK_Giderler_Personel">
+      <End Role="Personel" EntitySet="Personel" />
+      <End Role="Giderler" EntitySet="Giderler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kasa_Ogrenci" Association="Self.FK_Kasa_Ogrenci">
+      <End Role="Ogrenci" EntitySet="Ogrenci" />
+      <End Role="Kasa" EntitySet="Kasa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ogrenci_Alanlar" Association="Self.FK_Ogrenci_Alanlar">
+      <End Role="Alanlar" EntitySet="Alanlar" />
+      <End Role="Ogrenci" EntitySet="Ogrenci" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ogrenci_Siniflar" Association="Self.FK_Ogrenci_Siniflar">
+      <End Role="Siniflar" EntitySet="Siniflar" />
+      <End Role="Ogrenci" EntitySet="Ogrenci" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RehberOgretmen_Ogrenci" Association="Self.FK_RehberOgretmen_Ogrenci">
+      <End Role="Ogrenci" EntitySet="Ogrenci" />
+      <End Role="RehberOgretmen" EntitySet="RehberOgretmen" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

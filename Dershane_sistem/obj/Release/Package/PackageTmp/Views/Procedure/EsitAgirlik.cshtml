@@ -1,0 +1,28 @@
+﻿@using Dershane_sistem.Models.Entity;
+@model List<musti_Result>
+@{
+    ViewBag.Title = "EsitAgirlik";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>EŞİTAĞIRLIK</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Ogrenci AD </th>
+        <th>Ogrenci SOYAD </th>
+        <th>Ogrenci Alan</th>
+
+    </tr>
+    <tbody>
+        @foreach (var borc in Model)
+        {
+            <tr>
+                <th>@borc.OgrAd</th>
+                <td>@borc.OgrSoyad</td>
+                <th>EŞİTAĞIRLIK</th>
+
+
+            </tr>
+        }
+    </tbody>
+</table>

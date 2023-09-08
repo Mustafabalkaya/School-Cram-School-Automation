@@ -1,0 +1,71 @@
+﻿@using Dershane_sistem.Models.Entity
+@model List<Ogrenci>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+    <a href="/Ogrenci_Listeleme/YeniOgrenci/" class="btn btn-primary">OGRENCI EKLEME</a>
+<br /><br /><br /><br /><br /><br />
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Öğrenci Id </th>
+            <th>Öğrenci Adı </th>
+            <th>Öğrenci Soyadı </th>
+            <th>Öğrenci TC </th>
+            <th>Öğrenci Tel </th>
+            <th>Öğrenci Doğum Tarihi</th>
+            <th>Öğrenci Alan Bilgisi</th>
+            <th>Öğrenci Mail</th>
+            <th>Öğrenci Sınıf No</th>
+            <th>Veli Ad Soyad</th>
+            <th>Veli Telefon</th>
+            <th>Veli Adres</th>
+
+            <th>Öğrenci SİL  </th>
+            <th>Öğrenci GUNCELLE </th>
+
+        </tr>
+        <tbody>
+            @foreach (var ogr in Model)
+            {
+                <tr>
+                    <th>@ogr.Ogrid</th>
+                    <td>@ogr.OgrAd</td>
+                    <td>@ogr.OgrSoyad</td>
+                    <td>@ogr.OgrTc</td>
+                    <td>@ogr.OgrTelefon</td>
+                    <td>@ogr.OgrDogum</td>
+                    <td>@ogr.Alanlar.AlanAd</td>
+                    <td>@ogr.OgrMail</td>
+                    <td>@ogr.Siniflar.SinifNo</td>
+                    <td>@ogr.OgrVeliAdSoyad</td>
+                    <td>@ogr.OgrVeliTelefon</td>
+                    <td>@ogr.OgrVeliAdres</td>
+
+
+
+                    <td><a href="/Ogrenci_Listeleme/SIL/@ogr.Ogrid" class="btn btn-danger" onclick="return confirm('Gerçekten Silmek İstiyorMusunuz')">ÖĞRENCİ SİL</a></td>
+                    <td> <a href="/Ogrenci_Listeleme/guncelleme_getir/@ogr.Ogrid" class="btn btn-success">ÖĞRENCİ GUNCELLE</a></td>
+
+
+                </tr>
+            }
+        </tbody>
+
+    </table>
+<style>
+    .table-bordered {
+        position: absolute;
+        left: 0px;
+    }
+    .btn-primary{
+        position:absolute;
+        left:0px;
+    }
+</style>
+
+   
+

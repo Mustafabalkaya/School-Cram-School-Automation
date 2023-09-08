@@ -1,0 +1,49 @@
+﻿@using Dershane_sistem.Models.Entity
+@model List<Giderler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<a href="/Giderler/Gider_ekleme/" class="btn btn-primary">GİDER EKLEME</a>
+<br /><br /><br /><br /><br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ODEME Id </th>
+        <th>ELEKTRİK </th>
+        <th>SU </th>
+        <th>DOĞALGAZ  </th>
+        <th>INTERNET </th>
+        <th>GIDA </th>
+        <th>PERSONEL</th>
+        <th>DIGER</th>
+    </tr>
+    <tbody>
+        @foreach (var ktgr in Model)
+        {
+            <tr>
+                <th>@ktgr.Odemeid</th>
+                <td>@ktgr.Elektrik</td>
+                <td>@ktgr.Su</td>
+                <td>@ktgr.Dogalgaz</td>
+                <td>@ktgr.internet</td>
+                <td>@ktgr.Gida</td>
+                <td>@ktgr.Personel</td>
+                <td>@ktgr.Diger</td>
+
+
+
+                <td> <a href="/Giderler/SIL/@ktgr.Odemeid" class="btn btn-danger" onclick="return confirm('Gerçekten Silmek İstiyorMusunuz')">GİDER SİL</a></td>
+                <td> <a href="/Giderler/giderleri_getir/@ktgr.Odemeid" class="btn btn-success">GİDER GUNCELLE</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<style>
+    .table-bordered {
+        position: absolute;
+        left: 0px;
+    }
+</style>
+

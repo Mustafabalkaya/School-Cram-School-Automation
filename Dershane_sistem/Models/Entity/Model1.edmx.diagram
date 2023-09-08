@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c8167abfa4cc44ab9040a6eee6a25cd3" Name="Diagram1" ZoomLevel="75">
+        <EntityTypeShape EntityType="mustafaModel.Admin" Width="1.5" PointX="0.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mustafaModel.Alanlar" Width="1.5" PointX="12.875" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="mustafaModel.Borclarr" Width="1.5" PointX="8.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mustafaModel.Giderler" Width="1.5" PointX="8.625" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mustafaModel.Ogrenci" Width="1.5" PointX="2.875" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mustafaModel.Personel" Width="1.5" PointX="10.875" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mustafaModel.Siniflar" Width="1.5" PointX="0.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mustafaModel.sysdiagrams" Width="1.5" PointX="17.125" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="mustafaModel.FK_Ogrenci_Alanlar" ManuallyRouted="false" />
+        <AssociationConnector Association="mustafaModel.FK_Borclarr_Ogrenci1" ManuallyRouted="false" />
+        <AssociationConnector Association="mustafaModel.FK_Giderler_Personel" ManuallyRouted="false" />
+        <AssociationConnector Association="mustafaModel.FK_Ogrenci_Siniflar" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="mustafaModel.Kasa" Width="1.5" PointX="5.375" PointY="7.125" />
+        <EntityTypeShape EntityType="mustafaModel.RehberOgretmen" Width="1.5" PointX="5.25" PointY="0.875" />
+        <AssociationConnector Association="mustafaModel.FK_Kasa_Ogrenci" />
+        <AssociationConnector Association="mustafaModel.FK_RehberOgretmen_Ogrenci" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

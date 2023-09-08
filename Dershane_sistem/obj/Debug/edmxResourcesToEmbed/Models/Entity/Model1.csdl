@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mustafaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Yoneticiid" />
+    </Key>
+    <Property Name="Yoneticiid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YoneticiAd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="YoneticiSifre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AdminRol" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Alanlar">
+    <Key>
+      <PropertyRef Name="Alanid" />
+    </Key>
+    <Property Name="Alanid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AlanAd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ogrenci" Relationship="Self.FK_Ogrenci_Alanlar" FromRole="Alanlar" ToRole="Ogrenci" />
+  </EntityType>
+  <EntityType Name="Borclarr">
+    <Key>
+      <PropertyRef Name="Ogrid" />
+    </Key>
+    <Property Name="Ogrid" Type="Int32" Nullable="false" />
+    <Property Name="OgrAd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OgrSoyad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OgrKalanBorc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ogrenci" Relationship="Self.FK_Borclarr_Ogrenci1" FromRole="Borclarr" ToRole="Ogrenci" />
+  </EntityType>
+  <EntityType Name="Giderler">
+    <Key>
+      <PropertyRef Name="Odemeid" />
+    </Key>
+    <Property Name="Odemeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Elektrik" Type="Int32" />
+    <Property Name="Su" Type="Int32" />
+    <Property Name="Dogalgaz" Type="Int32" />
+    <Property Name="internet" Type="Int32" />
+    <Property Name="Gida" Type="Int32" />
+    <Property Name="Personel" Type="Int32" />
+    <Property Name="Diger" Type="Int32" />
+    <NavigationProperty Name="Personel1" Relationship="Self.FK_Giderler_Personel" FromRole="Giderler" ToRole="Personel" />
+  </EntityType>
+  <EntityType Name="Ogrenci">
+    <Key>
+      <PropertyRef Name="Ogrid" />
+    </Key>
+    <Property Name="Ogrid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OgrAd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OgrSoyad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OgrTc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OgrTelefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OgrDogum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OgrMail" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OgrVeliAdSoyad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OgrVeliTelefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OgrVeliAdres" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OgrAlanid" Type="Int32" />
+    <Property Name="OgrSinifid" Type="Int32" />
+    <NavigationProperty Name="Alanlar" Relationship="Self.FK_Ogrenci_Alanlar" FromRole="Ogrenci" ToRole="Alanlar" />
+    <NavigationProperty Name="Borclarr" Relationship="Self.FK_Borclarr_Ogrenci1" FromRole="Ogrenci" ToRole="Borclarr" />
+    <NavigationProperty Name="Siniflar" Relationship="Self.FK_Ogrenci_Siniflar" FromRole="Ogrenci" ToRole="Siniflar" />
+    <NavigationProperty Name="Kasa" Relationship="mustafaModel.FK_Kasa_Ogrenci" FromRole="Ogrenci" ToRole="Kasa" />
+    <NavigationProperty Name="RehberOgretmen" Relationship="mustafaModel.FK_RehberOgretmen_Ogrenci" FromRole="Ogrenci" ToRole="RehberOgretmen" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="Personelid" />
+    </Key>
+    <Property Name="Personelid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonelAdSoyad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelDepartman" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Giderler" Relationship="Self.FK_Giderler_Personel" FromRole="Personel" ToRole="Giderler" />
+  </EntityType>
+  <EntityType Name="Siniflar">
+    <Key>
+      <PropertyRef Name="Sinifid" />
+    </Key>
+    <Property Name="Sinifid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SinifNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SinifKapasite" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ogrenci" Relationship="Self.FK_Ogrenci_Siniflar" FromRole="Siniflar" ToRole="Ogrenci" />
+    <Property Name="SinifDurum" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Ogrenci_Alanlar">
+    <End Role="Alanlar" Type="Self.Alanlar" Multiplicity="0..1" />
+    <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alanlar">
+        <PropertyRef Name="Alanid" />
+      </Principal>
+      <Dependent Role="Ogrenci">
+        <PropertyRef Name="OgrAlanid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Borclarr_Ogrenci1">
+    <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="1" />
+    <End Role="Borclarr" Type="Self.Borclarr" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ogrenci">
+        <PropertyRef Name="Ogrid" />
+      </Principal>
+      <Dependent Role="Borclarr">
+        <PropertyRef Name="Ogrid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Giderler_Personel">
+    <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+    <End Role="Giderler" Type="Self.Giderler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personel">
+        <PropertyRef Name="Personelid" />
+      </Principal>
+      <Dependent Role="Giderler">
+        <PropertyRef Name="Personel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ogrenci_Siniflar">
+    <End Role="Siniflar" Type="Self.Siniflar" Multiplicity="0..1" />
+    <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Siniflar">
+        <PropertyRef Name="Sinifid" />
+      </Principal>
+      <Dependent Role="Ogrenci">
+        <PropertyRef Name="OgrSinifid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mustafaEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin" EntityType="Self.Admin" />
+    <EntitySet Name="Alanlar" EntityType="Self.Alanlar" />
+    <EntitySet Name="Borclarr" EntityType="Self.Borclarr" />
+    <EntitySet Name="Giderler" EntityType="Self.Giderler" />
+    <EntitySet Name="Ogrenci" EntityType="Self.Ogrenci" />
+    <EntitySet Name="Personel" EntityType="Self.Personel" />
+    <EntitySet Name="Siniflar" EntityType="Self.Siniflar" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_Ogrenci_Alanlar" Association="Self.FK_Ogrenci_Alanlar">
+      <End Role="Alanlar" EntitySet="Alanlar" />
+      <End Role="Ogrenci" EntitySet="Ogrenci" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Borclarr_Ogrenci1" Association="Self.FK_Borclarr_Ogrenci1">
+      <End Role="Ogrenci" EntitySet="Ogrenci" />
+      <End Role="Borclarr" EntitySet="Borclarr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Giderler_Personel" Association="Self.FK_Giderler_Personel">
+      <End Role="Personel" EntitySet="Personel" />
+      <End Role="Giderler" EntitySet="Giderler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ogrenci_Siniflar" Association="Self.FK_Ogrenci_Siniflar">
+      <End Role="Siniflar" EntitySet="Siniflar" />
+      <End Role="Ogrenci" EntitySet="Ogrenci" />
+    </AssociationSet>
+    <EntitySet Name="Kasa" EntityType="mustafaModel.Kasa" />
+    <EntitySet Name="RehberOgretmen" EntityType="mustafaModel.RehberOgretmen" />
+    <AssociationSet Name="FK_Kasa_Ogrenci" Association="mustafaModel.FK_Kasa_Ogrenci">
+      <End Role="Ogrenci" EntitySet="Ogrenci" />
+      <End Role="Kasa" EntitySet="Kasa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RehberOgretmen_Ogrenci" Association="mustafaModel.FK_RehberOgretmen_Ogrenci">
+      <End Role="Ogrenci" EntitySet="Ogrenci" />
+      <End Role="RehberOgretmen" EntitySet="RehberOgretmen" />
+    </AssociationSet>
+    <FunctionImport Name="mustafa" />
+    <FunctionImport Name="musti" ReturnType="Collection(mustafaModel.musti_Result)">
+      <Parameter Name="alan" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Kasa">
+    <Key>
+      <PropertyRef Name="Odemeid" />
+    </Key>
+    <Property Name="Odemeid" Type="Int32" Nullable="false" />
+    <Property Name="OdemekMiktar" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OdemeAy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ogrodemeid" Type="Int32" />
+    <NavigationProperty Name="Ogrenci" Relationship="mustafaModel.FK_Kasa_Ogrenci" FromRole="Kasa" ToRole="Ogrenci" />
+  </EntityType>
+  <EntityType Name="RehberOgretmen">
+    <Key>
+      <PropertyRef Name="rehberlikid" />
+    </Key>
+    <Property Name="rehberlikid" Type="Int32" Nullable="false" />
+    <Property Name="rehberlikad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ogrrehberlikid" Type="Int32" />
+    <NavigationProperty Name="Ogrenci" Relationship="mustafaModel.FK_RehberOgretmen_Ogrenci" FromRole="RehberOgretmen" ToRole="Ogrenci" />
+  </EntityType>
+  <Association Name="FK_Kasa_Ogrenci">
+    <End Type="mustafaModel.Ogrenci" Role="Ogrenci" Multiplicity="0..1" />
+    <End Type="mustafaModel.Kasa" Role="Kasa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ogrenci">
+        <PropertyRef Name="Ogrid" />
+      </Principal>
+      <Dependent Role="Kasa">
+        <PropertyRef Name="ogrodemeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RehberOgretmen_Ogrenci">
+    <End Type="mustafaModel.Ogrenci" Role="Ogrenci" Multiplicity="0..1" />
+    <End Type="mustafaModel.RehberOgretmen" Role="RehberOgretmen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ogrenci">
+        <PropertyRef Name="Ogrid" />
+      </Principal>
+      <Dependent Role="RehberOgretmen">
+        <PropertyRef Name="ogrrehberlikid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="musti_Result">
+    <Property Type="String" Name="OgrAd" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="OgrSoyad" Nullable="true" MaxLength="20" />
+  </ComplexType>
+</Schema>

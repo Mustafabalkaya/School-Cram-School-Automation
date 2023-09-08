@@ -1,0 +1,47 @@
+﻿@model Dershane_sistem.Models.Entity.Ogrenci
+@{
+    ViewBag.Title = "YeniOgrenci";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>ALAN ID</label>
+        @Html.DropDownListFor(m => m.Alanlar.Alanid, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+        <label>SINIF ID</label>
+        @Html.DropDownListFor(x => x.Siniflar.Sinifid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+        
+        <label>OGRENCİ ADI</label>
+        <input type="text" class="form-control" name="OgrAd"required="" />
+        <label>OGRENCİ SOYADI</label>
+        <input type="text" class="form-control" name="OgrSoyad"required=""  />
+        <label>OGRENCİ TC</label>
+        <input type="text" class="form-control" name="OgrTc"required=""  />
+        <label>OGRENCİ TELEFON</label>
+        <input type="text" class="form-control" name="OgrTelefon" required="" />
+        <label>OGRENCİ DOĞUM TARİHİ</label>
+        <input type="text" class="form-control" name="OgrDogum" required="" />        
+        <label>Öğrenci Mail</label>
+        <input type="text" class="form-control" name="OgrMail"required=""  />    
+        <label>VELİ AD SOYAD</label>
+        <input type="text" class="form-control" name="OgrVeliAdSoyad" required="" />
+        <label>VELİ TELEFON</label>
+        <input type="text" class="form-control" name="OgrVeliTelefon" required="" />
+        <label>VELİ ADRES</label>
+        <input type="text" class="form-control" name="OgrVeliAdres" required="" />
+              
+        
+
+
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="ogrenci_ekleme_butonu">ÖĞRENCİ EKLE</button>
+    </div>
+    <script type="text/html" >
+        $('#ogrenci_ekleme_butonu').click(function () {
+        alert("Öğrenci Ekleme İşlemi Başarıyla Gerçekleştirildi...");
+        });
+    </script>
+</form>
+
+

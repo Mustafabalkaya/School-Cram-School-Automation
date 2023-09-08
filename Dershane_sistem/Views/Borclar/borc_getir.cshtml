@@ -1,0 +1,26 @@
+﻿@model Dershane_sistem.Models.Entity.Borclarr
+@{
+    ViewBag.Title = "borc_getir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Borclar", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Ogrid)
+        @Html.TextBoxFor(m => m.Ogrid, new { @class = "form-control" })
+        @Html.LabelFor(m => m.OgrAd)
+        @Html.TextBoxFor(m => m.OgrAd, new { @class = "form-control" })
+        @Html.LabelFor(m => m.OgrSoyad)
+        @Html.TextBoxFor(m => m.OgrSoyad, new { @class = "form-control" })
+        @Html.LabelFor(m => m.OgrKalanBorc)
+        @Html.TextBoxFor(m => m.OgrKalanBorc, new { @class = "form-control" })
+
+
+    </div>
+
+    <div>
+        <button class="btn btn-warning">BORÇ GÜNCELLE</button>
+    </div>
+}
+

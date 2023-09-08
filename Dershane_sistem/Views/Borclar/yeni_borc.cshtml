@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "yeni_borc";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<form class="form-group" method="post">
+    <div>
+        <label>BORÇ EKLENECEK KİŞİ ID</label>
+        <input type="text" class="form-control" name="Ogrid" required="" />
+
+        <label>BORÇ EKLENECEK KİŞİ İSİM</label>
+        <input type="text" class="form-control" name="OgrAd" required="" />
+        <label>BORÇ EKLENECEK KİŞİ SOYİSİM</label>
+        <input type="text" class="form-control" name="OgrSoyad" required="" />
+        <label>EKLENECEK BORC</label>
+        <input type="text" class="form-control" name="OgrKalanBorc" value="10000" required="" />
+
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="borc_ekleme_butonu">BORÇ EKLE</button>
+    </div>
+    <script type="text/html" required="">
+        $('#borc_ekleme_butonu').click(function () {
+        alert("Borç Ekleme İşlemi Başarıyla Gerçekleştirildi...");
+        });
+    </script>
+</form>

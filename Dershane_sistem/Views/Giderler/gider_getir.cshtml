@@ -1,0 +1,33 @@
+﻿@model Dershane_sistem.Models.Entity.Giderler
+@{
+    ViewBag.Title = "gider_getir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("gider_Guncelle", "Giderler", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Odemeid)
+        @Html.TextBoxFor(m => m.Odemeid, new { @class = "form-control" })
+        @Html.LabelFor(m => m.Elektrik)
+        @Html.TextBoxFor(m => m.Elektrik, new { @class = "form-control" })
+        @Html.LabelFor(m => m.Su)
+        @Html.TextBoxFor(m => m.Su, new { @class = "form-control" })
+        @Html.LabelFor(m => m.Dogalgaz)
+        @Html.TextBoxFor(m => m.Dogalgaz, new { @class = "form-control" })
+        @Html.LabelFor(m => m.internet)
+        @Html.TextBoxFor(m => m.internet, new { @class = "form-control" })
+        @Html.LabelFor(m => m.Gida)
+        @Html.TextBoxFor(m => m.Gida, new { @class = "form-control" })
+        @Html.LabelFor(m => m.Personel)
+        @Html.TextBoxFor(m => m.Personel, new { @class = "form-control" })
+        @Html.LabelFor(m => m.Diger)
+        @Html.TextBoxFor(m => m.Diger, new { @class = "form-control" })
+
+    </div>
+
+    <div>
+        <button class="btn btn-warning">GİDER GÜNCELLE</button>
+    </div>
+}
+

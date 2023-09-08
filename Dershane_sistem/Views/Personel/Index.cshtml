@@ -1,0 +1,46 @@
+﻿@using Dershane_sistem.Models.Entity
+@model List<Personel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<a href="/PERSONEL/YeniPersonel/" class="btn btn-primary">PERSONEL EKLEME</a>
+<br /><br /><br />
+<table class="table table-bordered">
+
+    <tr>
+        <th>Personel Id </th>
+        <th>Personel Adı Soyadı </th>
+        <th>Personel Departman </th>
+        <th>Öğrenci SİL  </th>
+        <th>Öğrenci GUNCELLE </th>
+    </tr>
+    <tbody>
+        @foreach (var prsnl in Model)
+        {
+            <tr>
+                <th>@prsnl.Personelid</th>
+                <td>@prsnl.PersonelAdSoyad</td>
+                <td>@prsnl.PersonelDepartman</td>
+
+                <td> <a href="/PERSONEL/SIL/@prsnl.Personelid" class="btn btn-danger" onclick="return confirm('Gerçekten Silmek İstiyorMusunuz')">PERSONEL SİL</a></td>
+                <td> <a href="/PERSONEL/personel_getir/@prsnl.Personelid" class="btn btn-success">PERSONEL GUNCELLE</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .table-bordered {
+        position: absolute;
+        left: 0px;
+    }
+
+    .btn-primary {
+        position: absolute;
+        left: 0px;
+    }
+</style>
+
+

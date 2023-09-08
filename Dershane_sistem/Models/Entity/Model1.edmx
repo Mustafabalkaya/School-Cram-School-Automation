@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="mustafaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Yoneticiid" />
+          </Key>
+          <Property Name="Yoneticiid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="YoneticiAd" Type="varchar" MaxLength="20" />
+          <Property Name="YoneticiSifre" Type="varchar" MaxLength="20" />
+          <Property Name="AdminRol" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Alanlar">
+          <Key>
+            <PropertyRef Name="Alanid" />
+          </Key>
+          <Property Name="Alanid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AlanAd" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Borclarr">
+          <Key>
+            <PropertyRef Name="Ogrid" />
+          </Key>
+          <Property Name="Ogrid" Type="int" Nullable="false" />
+          <Property Name="OgrAd" Type="varchar" MaxLength="20" />
+          <Property Name="OgrSoyad" Type="varchar" MaxLength="20" />
+          <Property Name="OgrKalanBorc" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Giderler">
+          <Key>
+            <PropertyRef Name="Odemeid" />
+          </Key>
+          <Property Name="Odemeid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Elektrik" Type="int" />
+          <Property Name="Su" Type="int" />
+          <Property Name="Dogalgaz" Type="int" />
+          <Property Name="internet" Type="int" />
+          <Property Name="Gida" Type="int" />
+          <Property Name="Personel" Type="int" />
+          <Property Name="Diger" Type="int" />
+        </EntityType>
+        <EntityType Name="Kasa">
+          <Key>
+            <PropertyRef Name="Odemeid" />
+          </Key>
+          <Property Name="Odemeid" Type="int" Nullable="false" />
+          <Property Name="OdemekMiktar" Type="varchar" MaxLength="20" />
+          <Property Name="OdemeAy" Type="varchar" MaxLength="20" />
+          <Property Name="ogrodemeid" Type="int" />
+        </EntityType>
+        <EntityType Name="Ogrenci">
+          <Key>
+            <PropertyRef Name="Ogrid" />
+          </Key>
+          <Property Name="Ogrid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OgrAd" Type="varchar" MaxLength="20" />
+          <Property Name="OgrSoyad" Type="varchar" MaxLength="20" />
+          <Property Name="OgrTc" Type="varchar" MaxLength="20" />
+          <Property Name="OgrTelefon" Type="varchar" MaxLength="20" />
+          <Property Name="OgrDogum" Type="varchar" MaxLength="20" />
+          <Property Name="OgrMail" Type="varchar" MaxLength="20" />
+          <Property Name="OgrVeliAdSoyad" Type="varchar" MaxLength="20" />
+          <Property Name="OgrVeliTelefon" Type="varchar" MaxLength="20" />
+          <Property Name="OgrVeliAdres" Type="varchar" MaxLength="20" />
+          <Property Name="OgrAlanid" Type="int" />
+          <Property Name="OgrSinifid" Type="int" />
+          <Property Name="ogrkontenjan" Type="int" />
+        </EntityType>
+        <EntityType Name="Personel">
+          <Key>
+            <PropertyRef Name="Personelid" />
+          </Key>
+          <Property Name="Personelid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonelAdSoyad" Type="varchar" MaxLength="20" />
+          <Property Name="PersonelDepartman" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="RehberOgretmen">
+          <Key>
+            <PropertyRef Name="rehberlikid" />
+          </Key>
+          <Property Name="rehberlikid" Type="int" Nullable="false" />
+          <Property Name="rehberlikad" Type="varchar" MaxLength="50" />
+          <Property Name="ogrrehberlikid" Type="int" />
+        </EntityType>
+        <EntityType Name="Siniflar">
+          <Key>
+            <PropertyRef Name="Sinifid" />
+          </Key>
+          <Property Name="Sinifid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SinifNo" Type="varchar" MaxLength="20" />
+          <Property Name="SinifKapasite" Type="varchar" MaxLength="20" />
+          <Property Name="SinifDurum" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Borclarr_Ogrenci1">
+          <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="1" />
+          <End Role="Borclarr" Type="Self.Borclarr" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Ogrenci">
+              <PropertyRef Name="Ogrid" />
+            </Principal>
+            <Dependent Role="Borclarr">
+              <PropertyRef Name="Ogrid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Giderler_Personel">
+          <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+          <End Role="Giderler" Type="Self.Giderler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personel">
+              <PropertyRef Name="Personelid" />
+            </Principal>
+            <Dependent Role="Giderler">
+              <PropertyRef Name="Personel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kasa_Ogrenci">
+          <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="0..1" />
+          <End Role="Kasa" Type="Self.Kasa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ogrenci">
+              <PropertyRef Name="Ogrid" />
+            </Principal>
+            <Dependent Role="Kasa">
+              <PropertyRef Name="ogrodemeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ogrenci_Alanlar">
+          <End Role="Alanlar" Type="Self.Alanlar" Multiplicity="0..1" />
+          <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alanlar">
+              <PropertyRef Name="Alanid" />
+            </Principal>
+            <Dependent Role="Ogrenci">
+              <PropertyRef Name="OgrAlanid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ogrenci_Siniflar">
+          <End Role="Siniflar" Type="Self.Siniflar" Multiplicity="0..1" />
+          <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Siniflar">
+              <PropertyRef Name="Sinifid" />
+            </Principal>
+            <Dependent Role="Ogrenci">
+              <PropertyRef Name="OgrSinifid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RehberOgretmen_Ogrenci">
+          <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="0..1" />
+          <End Role="RehberOgretmen" Type="Self.RehberOgretmen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ogrenci">
+              <PropertyRef Name="Ogrid" />
+            </Principal>
+            <Dependent Role="RehberOgretmen">
+              <PropertyRef Name="ogrrehberlikid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="mustafa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="musti" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="alan" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="mustafaModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Alanlar" EntityType="Self.Alanlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Borclarr" EntityType="Self.Borclarr" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Giderler" EntityType="Self.Giderler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kasa" EntityType="Self.Kasa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ogrenci" EntityType="Self.Ogrenci" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personel" EntityType="Self.Personel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RehberOgretmen" EntityType="Self.RehberOgretmen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Siniflar" EntityType="Self.Siniflar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Borclarr_Ogrenci1" Association="Self.FK_Borclarr_Ogrenci1">
+            <End Role="Ogrenci" EntitySet="Ogrenci" />
+            <End Role="Borclarr" EntitySet="Borclarr" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Giderler_Personel" Association="Self.FK_Giderler_Personel">
+            <End Role="Personel" EntitySet="Personel" />
+            <End Role="Giderler" EntitySet="Giderler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kasa_Ogrenci" Association="Self.FK_Kasa_Ogrenci">
+            <End Role="Ogrenci" EntitySet="Ogrenci" />
+            <End Role="Kasa" EntitySet="Kasa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ogrenci_Alanlar" Association="Self.FK_Ogrenci_Alanlar">
+            <End Role="Alanlar" EntitySet="Alanlar" />
+            <End Role="Ogrenci" EntitySet="Ogrenci" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ogrenci_Siniflar" Association="Self.FK_Ogrenci_Siniflar">
+            <End Role="Siniflar" EntitySet="Siniflar" />
+            <End Role="Ogrenci" EntitySet="Ogrenci" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RehberOgretmen_Ogrenci" Association="Self.FK_RehberOgretmen_Ogrenci">
+            <End Role="Ogrenci" EntitySet="Ogrenci" />
+            <End Role="RehberOgretmen" EntitySet="RehberOgretmen" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mustafaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Yoneticiid" />
+          </Key>
+          <Property Name="Yoneticiid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="YoneticiAd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="YoneticiSifre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AdminRol" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Alanlar">
+          <Key>
+            <PropertyRef Name="Alanid" />
+          </Key>
+          <Property Name="Alanid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AlanAd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Ogrenci" Relationship="Self.FK_Ogrenci_Alanlar" FromRole="Alanlar" ToRole="Ogrenci" />
+        </EntityType>
+        <EntityType Name="Borclarr">
+          <Key>
+            <PropertyRef Name="Ogrid" />
+          </Key>
+          <Property Name="Ogrid" Type="Int32" Nullable="false" />
+          <Property Name="OgrAd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OgrSoyad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OgrKalanBorc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Ogrenci" Relationship="Self.FK_Borclarr_Ogrenci1" FromRole="Borclarr" ToRole="Ogrenci" />
+        </EntityType>
+        <EntityType Name="Giderler">
+          <Key>
+            <PropertyRef Name="Odemeid" />
+          </Key>
+          <Property Name="Odemeid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Elektrik" Type="Int32" />
+          <Property Name="Su" Type="Int32" />
+          <Property Name="Dogalgaz" Type="Int32" />
+          <Property Name="internet" Type="Int32" />
+          <Property Name="Gida" Type="Int32" />
+          <Property Name="Personel" Type="Int32" />
+          <Property Name="Diger" Type="Int32" />
+          <NavigationProperty Name="Personel1" Relationship="Self.FK_Giderler_Personel" FromRole="Giderler" ToRole="Personel" />
+        </EntityType>
+        <EntityType Name="Ogrenci">
+          <Key>
+            <PropertyRef Name="Ogrid" />
+          </Key>
+          <Property Name="Ogrid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OgrAd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OgrSoyad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OgrTc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OgrTelefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OgrDogum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OgrMail" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OgrVeliAdSoyad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OgrVeliTelefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OgrVeliAdres" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OgrAlanid" Type="Int32" />
+          <Property Name="OgrSinifid" Type="Int32" />
+          <NavigationProperty Name="Alanlar" Relationship="Self.FK_Ogrenci_Alanlar" FromRole="Ogrenci" ToRole="Alanlar" />
+          <NavigationProperty Name="Borclarr" Relationship="Self.FK_Borclarr_Ogrenci1" FromRole="Ogrenci" ToRole="Borclarr" />
+          <NavigationProperty Name="Siniflar" Relationship="Self.FK_Ogrenci_Siniflar" FromRole="Ogrenci" ToRole="Siniflar" />
+          <NavigationProperty Name="Kasa" Relationship="mustafaModel.FK_Kasa_Ogrenci" FromRole="Ogrenci" ToRole="Kasa" />
+          <NavigationProperty Name="RehberOgretmen" Relationship="mustafaModel.FK_RehberOgretmen_Ogrenci" FromRole="Ogrenci" ToRole="RehberOgretmen" />
+        </EntityType>
+        <EntityType Name="Personel">
+          <Key>
+            <PropertyRef Name="Personelid" />
+          </Key>
+          <Property Name="Personelid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonelAdSoyad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PersonelDepartman" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Giderler" Relationship="Self.FK_Giderler_Personel" FromRole="Personel" ToRole="Giderler" />
+        </EntityType>
+        <EntityType Name="Siniflar">
+          <Key>
+            <PropertyRef Name="Sinifid" />
+          </Key>
+          <Property Name="Sinifid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SinifNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SinifKapasite" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Ogrenci" Relationship="Self.FK_Ogrenci_Siniflar" FromRole="Siniflar" ToRole="Ogrenci" />
+          <Property Name="SinifDurum" Type="Int32" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Ogrenci_Alanlar">
+          <End Role="Alanlar" Type="Self.Alanlar" Multiplicity="0..1" />
+          <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alanlar">
+              <PropertyRef Name="Alanid" />
+            </Principal>
+            <Dependent Role="Ogrenci">
+              <PropertyRef Name="OgrAlanid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Borclarr_Ogrenci1">
+          <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="1" />
+          <End Role="Borclarr" Type="Self.Borclarr" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Ogrenci">
+              <PropertyRef Name="Ogrid" />
+            </Principal>
+            <Dependent Role="Borclarr">
+              <PropertyRef Name="Ogrid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Giderler_Personel">
+          <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+          <End Role="Giderler" Type="Self.Giderler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personel">
+              <PropertyRef Name="Personelid" />
+            </Principal>
+            <Dependent Role="Giderler">
+              <PropertyRef Name="Personel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ogrenci_Siniflar">
+          <End Role="Siniflar" Type="Self.Siniflar" Multiplicity="0..1" />
+          <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Siniflar">
+              <PropertyRef Name="Sinifid" />
+            </Principal>
+            <Dependent Role="Ogrenci">
+              <PropertyRef Name="OgrSinifid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="mustafaEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admin" EntityType="Self.Admin" />
+          <EntitySet Name="Alanlar" EntityType="Self.Alanlar" />
+          <EntitySet Name="Borclarr" EntityType="Self.Borclarr" />
+          <EntitySet Name="Giderler" EntityType="Self.Giderler" />
+          <EntitySet Name="Ogrenci" EntityType="Self.Ogrenci" />
+          <EntitySet Name="Personel" EntityType="Self.Personel" />
+          <EntitySet Name="Siniflar" EntityType="Self.Siniflar" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <AssociationSet Name="FK_Ogrenci_Alanlar" Association="Self.FK_Ogrenci_Alanlar">
+            <End Role="Alanlar" EntitySet="Alanlar" />
+            <End Role="Ogrenci" EntitySet="Ogrenci" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Borclarr_Ogrenci1" Association="Self.FK_Borclarr_Ogrenci1">
+            <End Role="Ogrenci" EntitySet="Ogrenci" />
+            <End Role="Borclarr" EntitySet="Borclarr" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Giderler_Personel" Association="Self.FK_Giderler_Personel">
+            <End Role="Personel" EntitySet="Personel" />
+            <End Role="Giderler" EntitySet="Giderler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ogrenci_Siniflar" Association="Self.FK_Ogrenci_Siniflar">
+            <End Role="Siniflar" EntitySet="Siniflar" />
+            <End Role="Ogrenci" EntitySet="Ogrenci" />
+          </AssociationSet>
+          <EntitySet Name="Kasa" EntityType="mustafaModel.Kasa" />
+          <EntitySet Name="RehberOgretmen" EntityType="mustafaModel.RehberOgretmen" />
+          <AssociationSet Name="FK_Kasa_Ogrenci" Association="mustafaModel.FK_Kasa_Ogrenci">
+            <End Role="Ogrenci" EntitySet="Ogrenci" />
+            <End Role="Kasa" EntitySet="Kasa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RehberOgretmen_Ogrenci" Association="mustafaModel.FK_RehberOgretmen_Ogrenci">
+            <End Role="Ogrenci" EntitySet="Ogrenci" />
+            <End Role="RehberOgretmen" EntitySet="RehberOgretmen" />
+          </AssociationSet>
+          <FunctionImport Name="mustafa" />
+          <FunctionImport Name="musti" ReturnType="Collection(mustafaModel.musti_Result)">
+          <Parameter Name="alan" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="Kasa">
+          <Key>
+            <PropertyRef Name="Odemeid" />
+          </Key>
+          <Property Name="Odemeid" Type="Int32" Nullable="false" />
+          <Property Name="OdemekMiktar" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OdemeAy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ogrodemeid" Type="Int32" />
+          <NavigationProperty Name="Ogrenci" Relationship="mustafaModel.FK_Kasa_Ogrenci" FromRole="Kasa" ToRole="Ogrenci" />
+        </EntityType>
+        <EntityType Name="RehberOgretmen">
+          <Key>
+            <PropertyRef Name="rehberlikid" />
+          </Key>
+          <Property Name="rehberlikid" Type="Int32" Nullable="false" />
+          <Property Name="rehberlikad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ogrrehberlikid" Type="Int32" />
+          <NavigationProperty Name="Ogrenci" Relationship="mustafaModel.FK_RehberOgretmen_Ogrenci" FromRole="RehberOgretmen" ToRole="Ogrenci" />
+        </EntityType>
+        <Association Name="FK_Kasa_Ogrenci">
+          <End Type="mustafaModel.Ogrenci" Role="Ogrenci" Multiplicity="0..1" />
+          <End Type="mustafaModel.Kasa" Role="Kasa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ogrenci">
+              <PropertyRef Name="Ogrid" />
+            </Principal>
+            <Dependent Role="Kasa">
+              <PropertyRef Name="ogrodemeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RehberOgretmen_Ogrenci">
+          <End Type="mustafaModel.Ogrenci" Role="Ogrenci" Multiplicity="0..1" />
+          <End Type="mustafaModel.RehberOgretmen" Role="RehberOgretmen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ogrenci">
+              <PropertyRef Name="Ogrid" />
+            </Principal>
+            <Dependent Role="RehberOgretmen">
+              <PropertyRef Name="ogrrehberlikid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="musti_Result">
+          <Property Type="String" Name="OgrAd" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="OgrSoyad" Nullable="true" MaxLength="20" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mustafaModelStoreContainer" CdmEntityContainer="mustafaEntities2">
+          <EntitySetMapping Name="Admin">
+            <EntityTypeMapping TypeName="mustafaModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="AdminRol" ColumnName="AdminRol" />
+                <ScalarProperty Name="Yoneticiid" ColumnName="Yoneticiid" />
+                <ScalarProperty Name="YoneticiAd" ColumnName="YoneticiAd" />
+                <ScalarProperty Name="YoneticiSifre" ColumnName="YoneticiSifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Alanlar">
+            <EntityTypeMapping TypeName="mustafaModel.Alanlar">
+              <MappingFragment StoreEntitySet="Alanlar">
+                <ScalarProperty Name="Alanid" ColumnName="Alanid" />
+                <ScalarProperty Name="AlanAd" ColumnName="AlanAd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Borclarr">
+            <EntityTypeMapping TypeName="mustafaModel.Borclarr">
+              <MappingFragment StoreEntitySet="Borclarr">
+                <ScalarProperty Name="Ogrid" ColumnName="Ogrid" />
+                <ScalarProperty Name="OgrAd" ColumnName="OgrAd" />
+                <ScalarProperty Name="OgrSoyad" ColumnName="OgrSoyad" />
+                <ScalarProperty Name="OgrKalanBorc" ColumnName="OgrKalanBorc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Giderler">
+            <EntityTypeMapping TypeName="mustafaModel.Giderler">
+              <MappingFragment StoreEntitySet="Giderler">
+                <ScalarProperty Name="Odemeid" ColumnName="Odemeid" />
+                <ScalarProperty Name="Elektrik" ColumnName="Elektrik" />
+                <ScalarProperty Name="Su" ColumnName="Su" />
+                <ScalarProperty Name="Dogalgaz" ColumnName="Dogalgaz" />
+                <ScalarProperty Name="internet" ColumnName="internet" />
+                <ScalarProperty Name="Gida" ColumnName="Gida" />
+                <ScalarProperty Name="Personel" ColumnName="Personel" />
+                <ScalarProperty Name="Diger" ColumnName="Diger" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ogrenci">
+            <EntityTypeMapping TypeName="mustafaModel.Ogrenci">
+              <MappingFragment StoreEntitySet="Ogrenci">
+                <ScalarProperty Name="Ogrid" ColumnName="Ogrid" />
+                <ScalarProperty Name="OgrAd" ColumnName="OgrAd" />
+                <ScalarProperty Name="OgrSoyad" ColumnName="OgrSoyad" />
+                <ScalarProperty Name="OgrTc" ColumnName="OgrTc" />
+                <ScalarProperty Name="OgrTelefon" ColumnName="OgrTelefon" />
+                <ScalarProperty Name="OgrDogum" ColumnName="OgrDogum" />
+                <ScalarProperty Name="OgrMail" ColumnName="OgrMail" />
+                <ScalarProperty Name="OgrVeliAdSoyad" ColumnName="OgrVeliAdSoyad" />
+                <ScalarProperty Name="OgrVeliTelefon" ColumnName="OgrVeliTelefon" />
+                <ScalarProperty Name="OgrVeliAdres" ColumnName="OgrVeliAdres" />
+                <ScalarProperty Name="OgrAlanid" ColumnName="OgrAlanid" />
+                <ScalarProperty Name="OgrSinifid" ColumnName="OgrSinifid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personel">
+            <EntityTypeMapping TypeName="mustafaModel.Personel">
+              <MappingFragment StoreEntitySet="Personel">
+                <ScalarProperty Name="Personelid" ColumnName="Personelid" />
+                <ScalarProperty Name="PersonelAdSoyad" ColumnName="PersonelAdSoyad" />
+                <ScalarProperty Name="PersonelDepartman" ColumnName="PersonelDepartman" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Siniflar">
+            <EntityTypeMapping TypeName="mustafaModel.Siniflar">
+              <MappingFragment StoreEntitySet="Siniflar">
+                <ScalarProperty Name="SinifDurum" ColumnName="SinifDurum" />
+                <ScalarProperty Name="Sinifid" ColumnName="Sinifid" />
+                <ScalarProperty Name="SinifNo" ColumnName="SinifNo" />
+                <ScalarProperty Name="SinifKapasite" ColumnName="SinifKapasite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="mustafaModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kasa">
+            <EntityTypeMapping TypeName="mustafaModel.Kasa">
+              <MappingFragment StoreEntitySet="Kasa">
+                <ScalarProperty Name="ogrodemeid" ColumnName="ogrodemeid" />
+                <ScalarProperty Name="OdemeAy" ColumnName="OdemeAy" />
+                <ScalarProperty Name="OdemekMiktar" ColumnName="OdemekMiktar" />
+                <ScalarProperty Name="Odemeid" ColumnName="Odemeid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RehberOgretmen">
+            <EntityTypeMapping TypeName="mustafaModel.RehberOgretmen">
+              <MappingFragment StoreEntitySet="RehberOgretmen">
+                <ScalarProperty Name="ogrrehberlikid" ColumnName="ogrrehberlikid" />
+                <ScalarProperty Name="rehberlikad" ColumnName="rehberlikad" />
+                <ScalarProperty Name="rehberlikid" ColumnName="rehberlikid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="mustafa" FunctionName="mustafaModel.Store.mustafa" />
+          <FunctionImportMapping FunctionImportName="musti" FunctionName="mustafaModel.Store.musti">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="mustafaModel.musti_Result">
+                <ScalarProperty Name="OgrAd" ColumnName="OgrAd" />
+                <ScalarProperty Name="OgrSoyad" ColumnName="OgrSoyad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

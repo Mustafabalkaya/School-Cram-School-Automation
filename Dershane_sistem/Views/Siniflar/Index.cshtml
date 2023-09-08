@@ -1,0 +1,37 @@
+﻿@using Dershane_sistem.Models.Entity
+@model List<Siniflar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>SINIF LİSTESİ</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Sınıf Id </th>
+        <th>Sınıf No </th>
+        <th>Sınıf Kapasitesi </th>
+        <th>Sınıf Durum  </th>
+    </tr>
+    <tbody>
+        @foreach (var sinif in Model)
+        {
+            <tr>
+                <th>@sinif.Sinifid</th>
+                <td>@sinif.SinifNo</td>
+                <td>@sinif.SinifKapasite</td>
+                <td>@sinif.SinifDurum</td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+<style>
+    .table-bordered {
+        position: absolute;
+        left: 0px;
+    }
+</style>

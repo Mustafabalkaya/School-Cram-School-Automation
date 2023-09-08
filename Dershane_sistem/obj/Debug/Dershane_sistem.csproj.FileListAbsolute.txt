@@ -1,0 +1,174 @@
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\ApplicationInsights.config
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\csc.exe
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\System.Collections.Immutable.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\vbc.exe
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\VBCSCompiler.exe
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\roslyn\VBCSCompiler.exe.config
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Dershane_sistem.dll.config
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Dershane_sistem.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Dershane_sistem.pdb
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Antlr3.Runtime.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\EntityFramework.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\EntityFramework.SqlServer.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.Web.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.WindowsServer.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.ApplicationInsights.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Google.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Web.Infrastructure.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Newtonsoft.Json.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Owin.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\PagedList.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\PagedList.Mvc.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.Helpers.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.Mvc.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.Optimization.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.Razor.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.Deployment.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.Razor.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\WebGrease.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.Web.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.WindowsServer.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.ApplicationInsights.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\PagedList.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\PagedList.Mvc.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.Helpers.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.Mvc.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.Optimization.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.Razor.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.Deployment.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.Razor.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Antlr3.Runtime.pdb
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Newtonsoft.Json.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\EntityFramework.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\EntityFramework.SqlServer.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Google.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\obj\Debug\Dershane_sistem.csprojResolveAssemblyReference.cache
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\obj\Debug\Dershane_sistem.dll
+c:\users\balkaya\documents\visual studio 2015\Projects\Dershane_sistem\Dershane_sistem\obj\Debug\Dershane_sistem.pdb
+C:\Users\Balkaya\Documents\Visual Studio 2015\Projects\Dershane_sistem\Dershane_sistem\bin\DataAccess.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\ApplicationInsights.config
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\csc.exe
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\vbc.exe
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\VBCSCompiler.exe
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Dershane_sistem.dll.config
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Dershane_sistem.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Dershane_sistem.pdb
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Antlr3.Runtime.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\DataAccess.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\EntityFramework.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\EntityFramework.SqlServer.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.Web.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Newtonsoft.Json.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Owin.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\PagedList.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\PagedList.Mvc.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.Helpers.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.Mvc.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.Optimization.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.Razor.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.Razor.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\WebGrease.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.Web.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\PagedList.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\PagedList.Mvc.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.Helpers.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.Mvc.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.Optimization.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.Razor.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\System.Web.WebPages.Razor.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Antlr3.Runtime.pdb
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Newtonsoft.Json.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\EntityFramework.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\EntityFramework.SqlServer.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\obj\Debug\Dershane_sistem.csprojResolveAssemblyReference.cache
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\obj\Debug\Dershane_sistem.dll
+C:\Users\Balkaya\Desktop\MUSTAFA_BALKAYA_PROJE\Dershane_sistem\Dershane_sistem\obj\Debug\Dershane_sistem.pdb

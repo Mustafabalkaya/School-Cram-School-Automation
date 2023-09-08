@@ -1,0 +1,35 @@
+﻿@model Dershane_sistem.Models.Entity.Admin
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DERSHANE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='~/web/main.css'>
+    <script src='~/web/main.js'></script>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Giriş</h2>
+        @using (Html.BeginForm("Giris", "Login", FormMethod.Post))
+        {
+            <div class="user-box">
+                <input type="text" name="YoneticiAd" required="">
+                <label>Kullanıcı Adı</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="YoneticiSifre" required="">
+                <label>Şifre</label>
+            </div>
+
+            <button class="btn btn-danger btn-block" type="submit">GİRİŞ YAP</button>
+        }
+    </div>
+</body>
+</html>

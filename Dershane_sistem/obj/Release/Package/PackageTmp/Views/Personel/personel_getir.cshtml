@@ -1,0 +1,23 @@
+﻿@model Dershane_sistem.Models.Entity.Personel
+@{
+    ViewBag.Title = "personel_getir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+z
+@using (Html.BeginForm("Guncelle", "Personel", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Personelid)
+        @Html.TextBoxFor(m => m.Personelid, new { @class = "form-control" })
+        @Html.LabelFor(m => m.PersonelDepartman)
+        @Html.TextBoxFor(m => m.PersonelDepartman, new { @class = "form-control" })
+        @Html.LabelFor(m => m.PersonelAdSoyad)
+        @Html.TextBoxFor(m => m.PersonelAdSoyad, new { @class = "form-control" })
+
+    </div>
+
+    <div>
+        <button class="btn btn-warning">PERSONEL GÜNCELLE</button>
+    </div>
+}
+

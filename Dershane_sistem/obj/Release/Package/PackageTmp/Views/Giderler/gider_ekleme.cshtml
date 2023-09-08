@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "gider_ekleme";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<form class="form-group" method="post">
+    <div>
+        <label>ELEKTRİK</label>
+        <input type="text" class="form-control" name="Elektrik" required="" />
+        <label>SU</label>
+        <input type="text" class="form-control" name="Su" required="" />
+        <label>DOĞALGAZ</label>
+        <input type="text" class="form-control" name="Dogalgaz" required="" />
+        <label>İNTERNET</label>
+        <input type="text" class="form-control" name="internet" required="" />
+        <label>GIDA</label>
+        <input type="text" class="form-control" name="Gida" required="" />
+        <label>PERSONEL</label>
+        <input type="text" class="form-control" name="Personel" required="" />
+        <label>DIGER</label>
+        <input type="text" class="form-control" name="Diger" required="" />
+
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="gider_ekleme_butonu">GİDER EKLE</button>
+    </div>
+    <script type="text/html" required="">
+        $('#gider_ekleme_butonu').click(function () {
+        alert("Gider Ekleme İşlemi Başarıyla Gerçekleştirildi...");
+        });
+    </script>
+    </>
+</form>
