@@ -1,4 +1,4 @@
-# Project Name
+# A Tutorial Center Automation System Developed with ASP.NET MVC
 
 This project is a student and staff management system developed using ASP.NET MVC. It utilizes Microsoft SQL Server Management Studio for the database design. The system includes functionalities for student and staff listing, adding, deleting, and updating. User roles and permissions are implemented, allowing users with different roles to access different screens.
 
